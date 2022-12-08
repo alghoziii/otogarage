@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant&family=Gulzar&family=Roboto+Slab&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #fefefe;
+}
+
+/* burger icon */
+
+.burger {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #0e2c6b;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: white;
+}
+
+.change .bar2 {
+  opacity: 0;
+  background-color: white;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: white;
+}
+
+/* wraper */
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  padding: 10px 20px;
+  box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+nav .brand a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 550;
+  font-family: "Roboto Slab", serif;
+  color: #0e2c6b;
+}
+
+.bg-sidebar {
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  visibility: hidden;
+}
+
+.bg-sidebar.change {
+  right: 0;
+  visibility: visible;
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  position: fixed;
+  background-color: #0e2c6b;
+  top: 0;
+  bottom: 0;
+  right: -300px;
+  width: 300px;
+  transition: 0.5s;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+nav ul.change {
+  right: 0;
+  transition: 0.5s;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 20px 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 960px) {
+  .bg-sidebar.change {
+    right: 0;
+    visibility: hidden;
+    display: none;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    display: flex;
+    position: relative;
+    background-color: unset;
+    top: unset;
+    bottom: unset;
+    right: unset;
+    width: unset;
+    flex-direction: row;
+  }
+
+  nav ul li {
+    padding: 10px 15px;
+  }
+
+  nav ul li:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    background-color: black;
+    transform: translateY(20px);
+  }
+
+  nav ul li a {
+    color: black;
+    font-size: 1.1rem;
+  }
+
+  nav ul li:last-child {
+    font-weight: 550;
+  }
+}
+
+section {
+  margin: 70px;
+  display: flex;
+  margin-bottom: 90px;
+}
+
+.kolom {
+  margin-top: 160px;
+  margin-bottom: 50px;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.card a{
+  margin:5px;
+  
+}
+
+@media (max-width: 768px) {
+  aside img{
+    margin:1px;
+    height:50%;
+  }
+  .card h1{
+    margin-top:50px;
+  }
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 60px;
+  color: #0e2c6b;
+}
+a.tbl {
+  background: #0e2c6b;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  padding: 15px 20px 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+p {
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px;
+}
+
+@media (max-width: 768px) {
+  section {
+    display: inline;
+  }
+  h1 {
+    margin-top: 100px;
+    font-size: 40px;
+    margin: 10px;
+  }
+  p {
+    margin: 10px;
+  }
+  img {
+    width: 350px;
+    margin:15px;
+  }
+  h1{
+    margin-top:-100px; */
+  }
+  a.tbl{
+   margin:120px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-flex {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/*  */
+
+.about h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "Roboto Slab", serif;
+  color: #0e2c6b;
+  margin-top: 50px;
+}
+
+.about p,
+ul {
+  color: #000000;
+}
+
+.section-header-about {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.kolom1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .kolom1 {
+    text-align: center;
+  }
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.section-header-gallery {
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.gallery h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "Roboto Slab", serif;
+  color: #0e2c6b;
+  margin-top: 50px;
+}
+.containers img {
+  border: 3px solid #0e2c6b;
+  padding: 15px 19px;
+  margin-top: 5px;
+  line-height: 20px;
+  border-radius: 20px;
+}
+.containers img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .container img {
+    margin: 17px; */
+  }
+  .containers img{
+    margin:1px;
+    
+  }
+}
+
+.contact {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #0e2c6b;
+  display:inline;
+}
+
+@media (max-width: 768px) {
+  .Contact  {
+    padding:150px;
+  }
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin:10px;
+  
+}
+
+label {
+  padding: 10px;
+  
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+}
+
+.containere {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width:100%;
+}
+
+.col-25 {
+  float: left;
+  width: 95%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 95%;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+  label {
+    padding: 12px 12px 12px 9px;
+  }
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #0e2c6b;
+  text-align: center;
+  font-weight: bold;
+}
